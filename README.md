@@ -1,4 +1,4 @@
-# alura_angular_rxjs_1
+# Desafio Full Stack
 
 * Versoes da aplicacao
 
@@ -20,12 +20,8 @@ Package                      Version
 
 1- Baixe e extraia os arquivos da pasta zip
 
-2- Dentro da pasta *desafio/projeto* abra um terminal e execute o comando: npm install
+2- Dentro da pasta *projeto* abra um terminal e execute o comando: npm install
    *esse comando ira instalar os modulos e dependencias para execucao da aplicacao
 
-3- Dentro da pasta *desafio/api* abra um terminal e execute o comando:  npm install e depois npm start
-   *esses comandos irao instalar as dependencias e executar a nossa 
-    api de onde serao ingeridos nossos dados da aplicacao
-
-3- Abra um terminal na pasta *desafio/projeto e execute o comando:  ng serve --o
+3- Abra um terminal na pasta *projeto e execute o comando:  ng serve --o
    *esse comando ira executar a aplicacao no navegador padrao da sua maquina
