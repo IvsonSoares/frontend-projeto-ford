@@ -1,0 +1,31 @@
+app-card-carro .po-widget {
+  margin: 0 0px 0px 0;
+  text-align: center;
+  padding: 1%;
+  width: 75%;
+}
+
+.po-widget-xl {
+  width: 50%;
+
+}
+
+.main-font{
+  color: rgb(6, 11, 54);;
+  font-weight: bold;
+}
+
+.nice-select {
+  border-radius: 5px;
+  height: 30px; /* altura do select */
+  line-height: 30px; /* este valor deve ser o mesmo acima */
+  border: solid 1px #bbb; /* cor da borda do select*/
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+  text-align: left;
+}
+
+.option-personalizada{
+  width: auto;
+}

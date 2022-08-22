@@ -1,0 +1,40 @@
+.size{
+  height: 50%;
+  width: 50%;
+}
+
+input{
+  width: 50%;
+}
+
+table{
+  width: 100%;
+  border: 1px solid black;
+  text-align: initial;
+  border-bottom: 1rem solid rgb(6, 11, 54);
+}
+
+th{
+  padding: 4px;
+  font-size: 1rem;
+  color: white;
+  background-color: rgb(6, 11, 54);;
+}
+
+td{
+  padding: 5px;
+  font-size: 0.8rem;
+  color: black;
+  background-color: white;
+
+}
+
+.donut-chart{
+  margin-bottom: auto;
+  size: 5px;
+}
+
+.position{
+  margin-right: 8rem;
+  width: 50%;
+}

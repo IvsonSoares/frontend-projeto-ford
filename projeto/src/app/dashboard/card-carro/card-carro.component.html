@@ -1,0 +1,53 @@
+<!-- Card com Selecionador de Carro -->
+<div *ngIf="veiculos" >
+  <po-widget
+  p-height="150"
+  class="po-md-3"
+  p-title="Veiculo">
+      <select  class="nice-select" (change)="selectOption($event.target.value)">
+        <option class="option-personalizada" [value]="veiculo.id" *ngFor="let veiculo of veiculos" >{{veiculo.vehicle_model}}</option>
+      </select>
+  </po-widget>
+  <ng-template #elseBlock><p>Nao ha dados</p></ng-template>
+</div>
+
+<div *ngIf="veiculo">
+  <!-- Total Vendas -->
+    <po-widget
+    p-height="150"
+    class="po-md-3"
+    [p-title]="'Total de Vendas'"
+    >
+      <div class="po-font-subtitle po-text-center main-font">{{veiculo.vehicle_volumetotal}}</div>
+      <div class="sample-container-dashboard">Unid.</div>
+  </po-widget>
+
+  <!-- Conectado -->
+  <po-widget
+    class="po-md-3"
+    p-height="150"
+    [p-title]="'Conectados'"
+  >
+    <div class="po-font-subtitle po-text-center main-font">{{veiculo.vehicle_connected}}</div>
+    <div class=" sample-container-dashboard">Unid.</div>
+  </po-widget>
+
+  <!-- Update SoftwareUpdates -->
+  <po-widget
+  class="po-md-3"
+  p-height="150"
+    [p-title]="'Update Software'"
+    >
+    <div class="po-font-subtitle po-text-center main-font">{{veiculo.vehicle_softwareUpdates}}</div>
+    <div class=" sample-container-dashboard">Unid.</div>
+  </po-widget>
+
+  <!-- Component Carro(Imagem e Tabela) -->
+  <app-carro
+    [id]="veiculo.id"
+    [connected]="veiculo.vehicle_connected"
+    [softwareUpdate]="veiculo.vehicle_softwareUpdates"
+    [url]="veiculo.vehicle_model"
+    >
+  </app-carro>
+</div>

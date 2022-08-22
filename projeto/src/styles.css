@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+
+.po-modal-vertical-align{
+  background-color: rgba(250, 250, 250, 0.24);
+}
+
+.po-modal-overlay{
+  background-color: rgba(250, 250, 250, 0.24);
+}

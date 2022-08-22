@@ -1,0 +1,58 @@
+<po-modal #modal
+  p-title="Veiculo"
+  [p-primary-action]="confirm"
+  [p-secondary-action]="close"
+  >
+  <form [formGroup]="veiculoForm">
+
+
+    <div class="po-row" >
+      <po-input class="po-md-6"  formControlName="vin" name="Vin"  p-label="Vin"></po-input>
+      <po-input class="po-md-6"  formControlName="odometer" name="Odometer"  p-label="Odometer"></po-input>
+    </div>
+  <div class="po-row">
+    <po-input class="po-md-6"  formControlName="tirePressure" name="tirePressure"  p-label="Tire Pressure"></po-input>
+    <po-input class="po-md-6"  formControlName="status" name="status"  p-label="Status"></po-input>
+  </div>
+  <div class="po-row">
+    <po-input class="po-md-6"  formControlName="batteryStatus" name="batteryStatus"  p-label="Bateria Status"></po-input>
+    <po-input class="po-md-6"  formControlName="NiveldeCombustivel" name="Nivel de Combustivel"  p-label="Nivel de Combustivel"></po-input>
+  </div>
+  <div class="po-row">
+    <po-input class="po-md-6"  formControlName="lat" name="lat"  p-label="Latitude"></po-input>
+    <po-input class="po-md-6"  formControlName="long" name="long"  p-label="Longitude"></po-input>
+  </div>
+</form>
+<po-modal-footer [p-disabled-align]="false">
+    <po-button p-danger="true" p-label="Close" (p-click)="closeModal()"> </po-button>
+    <po-button p-label="Clear" (p-click)="restore()"> </po-button>
+    <po-button p-kind="primary" p-label="Confirm" (p-click)="confirmVeiculo(confirmOp)"> </po-button>
+  </po-modal-footer>
+</po-modal>
+  <po-button
+  class="buttonsTD"
+(p-click)="createVeiculo(modal)"
+p-icon="po-icon-plus"
+p-kind="tertiary"
+p-small="false"
+>
+</po-button>
+<po-button
+class="buttonsTD"
+(p-click)="editVeiculo(modal)"
+p-with="1000"
+p-icon="po-icon-edit"
+p-kind="tertiary"
+p-small="false"
+>
+</po-button>
+<po-button
+class="buttonsTD"
+  (p-click)="deleteVeiculo()"
+  p-icon="po-icon-delete"
+  p-kind="tertiary"
+  p-small="false"
+  >
+</po-button>
+
+<!-- <po-button p-label="Buy fruits salad" (p-click)="open(modal, optionsForm)"> </po-button> -->

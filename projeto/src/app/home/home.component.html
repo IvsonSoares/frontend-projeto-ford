@@ -1,0 +1,26 @@
+<div class="po-wrapper">
+  <po-toolbar
+    p-notification-number="0"
+    [p-title]="title"
+    [p-show-notification]="false"
+    [p-notification-actions]="[]"
+    [p-profile]="profile"
+    [p-profile-actions]="profileActions"
+  >
+  </po-toolbar>
+
+  <po-menu [p-menus]="menu" [p-logo]="logo"></po-menu>
+  <router-outlet></router-outlet>
+
+  <div>
+    <img [src]="background">
+    <po-widget
+    class="po-sm-10 po-md-8 po-lg-6 centered-card"
+    p-title="Sistema de Dados FORD"
+    p-height="300"
+    >
+    <div class="po-font-subtitle po-text-center">Seja bem vindo(a)!</div>
+  </po-widget>
+</div>
+</div>
+

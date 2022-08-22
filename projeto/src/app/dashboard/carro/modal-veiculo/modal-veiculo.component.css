@@ -1,0 +1,15 @@
+
+.buttonsTD{
+  color: rgba(150, 150, 150, 0.4);
+  border: 3px solid;
+  padding: 0.1rem;
+  margin: 0.1rem 0.1rem;
+}
+
+.buttonsTD:hover{
+  background-color: rgba(150, 150, 150, 0.4);
+}
+
+.modal-window{
+  background-color: red;
+}

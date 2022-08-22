@@ -1,0 +1,52 @@
+<!-- Conectados -->
+<img [src]="url" class="po-lg-2 po-md-2 img-fluid size position">
+    <po-chart
+    class="po-lg-2 po-md-2 grafico"
+    [p-height]="100"
+    [p-title]="'Connected'"
+    [p-series]="connectedSerie"
+    [p-type]="connectedDonutChartType"
+    [p-options]="optionsColumn"
+    >
+  </po-chart>
+  <!-- Software Updates -->
+  <po-chart
+  class="po-lg-2 po-md-2 po-mr-0 grafico"
+  [p-height]="100"
+  [p-title]="'Software Update'"
+  [p-series]="softwareUpdateSerie"
+  [p-type]="updateSoftwareDonutChartType"
+  [p-options]="optionsColumn"
+
+  >
+</po-chart>
+
+<div *ngIf="veiculoData$ | async as veiculoData">
+  <table>
+    <thead>
+
+      <tr>
+        <th>Código Vin</th>
+        <th>Odômetro</th>
+        <th>Nível de Combustível</th>
+        <th>Status</th>
+        <th>Lat.</th>
+        <th>Long.</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>
+            <input type="text" [formControl]="carroInput" placeholder="{{veiculoData.vehicledata_vin}}" #valor>
+            <app-modal-veiculo [veiculoData]="veiculoData"></app-modal-veiculo>
+        </td>
+        <td>{{veiculoData.vehicledata_odometer}}</td>
+        <td>{{veiculoData.vehicledata_fuelLevel}}</td>
+        <td>{{veiculoData.vehicledata_status}}</td>
+        <td>{{veiculoData.vehicledata_lat}}</td>
+        <td>{{veiculoData.vehicledata_long}}</td>
+      </tr>
+    </tbody>
+</table>
+</div>
